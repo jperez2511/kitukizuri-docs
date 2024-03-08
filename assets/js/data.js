@@ -4,13 +4,27 @@ var es = [
         title:'Introducción',
         icon:'<i class="fa-duotone fa-signs-post" style="--fa-primary-color: #fa7820; --fa-secondary-color: #4a5b67; --fa-secondary-opacity: 1;"></i>',
         resume: 'Imagina una herramienta para facilitarte un punto de partida para tu aplicación, ahorrandote tiempo con componentes optimizados para funcionar con Laravel',
-        content: 'tengo hambre',
+        content: `
+            Kitu Kizuri es la herramienta especialmente diseñada para Laravel, con la cual podras contar con un punto de partida para tu aplicación, te puedes ahorrar tiempo de 
+            desarrollo tratando de implementar herramientas que con Kitu Kizuri puedes implementar en unos pocos clicks. El Kitu Kizuri cuenta con varios compoentenes
+            que forman parte del ecosistema de laravel, configurados utilizando las buenas practicas y recomendaciones de la comunidad, para que tengas la confianza
+            de iniciar tu proyecto bajo un entorno seguro y confiable.`,
         sub: [
             {
                 section: 1,
                 title:'¿Qué es Kitu Kizuri?',
-                resume: '',
-                content: '',
+                content: `
+                    "Kitu Kizuri" son dos palabras que en Suajili significan "algo bonito". Nombrar un paquete como "Algo Bonito" es porque nuestro objetivo 
+                    está en entregar una herramieta que te permita generar aplicaciones de manera rápida y practica, que programar se vuelva algo bonito.`,
+            },
+            {
+                section: 2,
+                title:'Componentes',
+                content: `
+                    Dentro de la herramienta, existen tres componentes importantes: <br><br>
+                    <i class="fa-duotone fa-medal" style="--fa-primary-color: #fa7820; --fa-secondary-color: #4a5b67; --fa-secondary-opacity: 1;"></i> <strong>Krud Security</strong> <br><br>
+                    
+                    `,
             }
         ]
     },
@@ -18,7 +32,7 @@ var es = [
         section: 2,
         title:'Instalación',
         icon:'<i class="fa-duotone fa-down-to-line" style="--fa-primary-color: #fa7820; --fa-secondary-color: #4a5b67; --fa-secondary-opacity: 1;"></i>',
-        resume: 'Puedes utilizar composer para instalar el paquete en tu proyecto.'
+        resume: 'Puedes utilizar composer para instalar el paquete en tu proyecto.',
     },
     {
         section: 3,
@@ -46,12 +60,19 @@ var en = [
         title:'Introduction',
         icon:'<i class="fa-duotone fa-signs-post" style="--fa-primary-color: #fa7820; --fa-secondary-color: #4a5b67; --fa-secondary-opacity: 1;"></i>',
         resume: 'Imagine a tool to give you a head start for your application, saving you time with components optimized to work with Laravel',
+        content: `
+            Kitu Kizuri is the tool specially designed for Laravel, with which you can have a starting point for your application, you can save development time trying 
+            to implement tools that with Kitu Kizuri you can implement in a few clicks. The Kitu Kizuri has several components that are part of the Laravel ecosystem, 
+            configured using good practices and recommendations from the community, so that you have the confidence to start your project under a secure and reliable 
+            environment.`,
         sub: [
             {
                 section: 1,
-                title:'¿Qué es Kitu Kizuri?',
-                resume: '',
-                content: '',
+                title:'What is Kitu Kizuri?',
+                content: `
+                    "Kitu Kizuri" are two words that in Swahili mean "something beautiful". Naming a package as "Something Beautiful" 
+                    is because our goal is to deliver a tool that allows you to generate applications quickly and practically, that 
+                    programming becomes something beautiful.`,
             }
         ]
     },
