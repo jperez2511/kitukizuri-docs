@@ -247,17 +247,176 @@ var es = [
         title:'Métodos disponibles',
         icon:'<i class="fa-duotone fa-function" style="--fa-primary-color: #cd7820; --fa-secondary-color: #4a5b67; --fa-secondary-opacity: 1;"></i>',
         resume: 'Conoce los métodos disponibles para trabajar con el paquete.',
-        content: `
-            <i class="fa-duotone fa-pen-swirl" style="--fa-primary-color: #4a5b67; --fa-secondary-color: #fa7820; --fa-secondary-opacity: 1;"></i> 
-            <strong>Sobre escritura de métodos</strong> <br><br>
-            KRUD extiende de un controlador de Laravel, por lo tanto puedes sobrescribir los métodos que ya existen en el controlador de Laravel,
-            a continuación te mostramos los métodos que puedes sobrescribir: <br><br>
-            <div id="metodos" style="width:100%; height:800px;"></div>`,
-        code: {
-            idElement: 'metodos',
-            language: 'php',
-            code: `\n<?php \n\nnamespace App\\Http\Controllers\\Catalog\\Example\\Route; \n\nuse Krud; \nuse Illuminate\\Http\\Request; \nuse Models\\Catalogs\\Example\\ModelName;  \n\nclass ControllerName extends Krud \n{ \n    public function __construct() \n    { \n        $this->setModel(new ModelName); \n        $this->setCampo(['nombre' => 'Label', 'campo' => 'nombre_campo_database']); \n    }\n\n    public function create(Request $request) \n    { \n        ... \n    } \n\n    public function edit($id, Request $request) \n    { \n        ... \n    } \n\n    public function update($id, Request $request) \n    { \n        ... \n    } \n\n    public function destroy($id, Request $request) \n    { \n        ... \n    } \n \n\n    public function store(Request $request) \n    { \n        ... \n    } \n \n}`
-        },    
+        content: `Dentro del KRUD tu puedes utilizar los métodos que hemos preparado para manejar los datos que quieras ver, editar, eliminar o crear.`,
+        sub: [
+            {
+                section: 1,
+                title:'<i class="fa-duotone fa-pen-swirl" style="--fa-primary-color: #4a5b67; --fa-secondary-color: #fa7820; --fa-secondary-opacity: 1;"></i>  Sobre escritura de métodos',
+                content: `KRUD extiende de un controlador de Laravel, por lo tanto puedes sobrescribir los métodos que ya existen en el controlador de Laravel,
+                a continuación te mostramos los métodos que puedes sobrescribir: <br><br>
+                <div id="metodos" style="width:100%; height:800px;"></div>`,
+                code: {
+                    idElement: 'metodos',
+                    language: 'php',
+                    code: `\n<?php \n\nnamespace App\\Http\Controllers\\Catalog\\Example\\Route; \n\nuse Krud; \nuse Illuminate\\Http\\Request; \nuse Models\\Catalogs\\Example\\ModelName;  \n\nclass ControllerName extends Krud \n{ \n    public function __construct() \n    { \n        $this->setModel(new ModelName); \n        $this->setCampo(['nombre' => 'Label', 'campo' => 'nombre_campo_database']); \n    }\n\n    public function create(Request $request) \n    { \n        ... \n    } \n\n    public function edit($id, Request $request) \n    { \n        ... \n    } \n\n    public function update($id, Request $request) \n    { \n        ... \n    } \n\n    public function destroy($id, Request $request) \n    { \n        ... \n    } \n \n\n    public function store(Request $request) \n    { \n        ... \n    } \n \n}`
+                },
+            },
+            {
+                section: 2,
+                title:'<i class="fa-duotone fa-code" style="--fa-primary-color: #4a5b67; --fa-secondary-color: #fa7820; --fa-secondary-opacity: 1;"></i>  Métodos prioritarios del KRUD',
+                content: `
+                    <div class="row">
+                        <div class="col-md-6 mb-3"><a href="#item-5-3">setModel</a></div>
+                        <div class="col-md-6 mb-3"><a href="#item-5-4">setCampo</a></div>
+                        <div class="col-md-6 mb-3"><a href="#item-5-5">setTitulo</a></div>
+                        <div class="col-md-6 mb-3"><a href="#item-5-6">setLayout</a></div>
+                        <div class="col-md-6 mb-3"><a href="#item-5-7">setStoreMSG</a></div>
+                        <div class="col-md-6 mb-3"><a href="#item-5-8">setValidationItem</a></div>
+                        <div class="col-md-6 mb-3"><a href="#item-5-9">setBoton</a></div>
+                        <div class="col-md-6 mb-3"><a href="#item-5-10">setBotonDT</a></div>
+                        <div class="col-md-6 mb-3"><a href="#item-5-11">setDefaultBotonDT</a></div>
+                        <div class="col-md-6 mb-3"><a href="#item-5-12">getSql</a></div>
+                    </div>`,
+            },
+            {
+                section: 3,
+                title:'setModel',
+                content: `
+                    Define el modelo donde se consultarán los datos, este método es el encargado de generar la estructura de tu formulario,
+                    y de la tabla que se mostrará en el index. <br><br>
+                    <div id="setModel" style="width:100%; height:100px;"></div>`,
+                code: {
+                    idElement: 'setModel',
+                    language: 'php',
+                    code: `\n<?php \n\n$this->setModel(new ModelName);`
+                }
+            },
+            {
+                section: 4,
+                title:'setCampo',
+                content: `
+                    Define los campos que se van a mostrar, editar o solo consultar, este método es el encargado de generar la estructura de tu formulario, 
+                    y de la tabla que se mostrará en el index. <br><br>
+                    <div id="setCampo" style="width:100%; height:550px;"></div>`,
+                code: {
+                    idElement: 'setCampo',
+                    language: 'php',
+                    code: `\n<?php \n\n$this->setCampo([ \n        'nombre' => 'Label', \n        'campo' => 'nombre_campo_database', \n        'tipo' => 'string', \n        'edit' => true, \n        'show' => true, ]); \n\n# Tipos de campos disponibles  \n // 'bool'     - Muestra un checkbox en el edit y un si o no en el index   \n // 'combobox' - Muestra un select simple \n // 'select2'  - Muestra un select con select2 \n // 'date'     - Input con formato tipo fecha \n // 'datetime' - Input en formato fecha y hora \n // 'enum'     - Select con valores determinados \n // 'file'     - Guarda un archivo en una ubicación definida \n // 'file64'   - Guarda un archivo codificado en base64 \n // 'hidden'   - Muestra un campo hidden en el formulario edit. \n // 'icono'    - Muestra un campo para seleccionar un icono \n // 'image'    - Guarda una imagen en formato Base64 \n // 'numeric'  - Muestra un campo de tipo number en HTML y le da formato en el index \n // 'password' - Muestra dos campos contraseña y confirmar contraseña \n // 'string'   - Tipo por defecto muestra un input tipo text \n // 'text'     - La misma definición de string \n // 'textarea' - Muestra un campo textArea en el formulario edit \n // 'url'      - Establece  una url con parámetros personalizados. `
+                }
+            },
+            {
+                section: 5,
+                title: 'setTitulo',
+                content: `
+                    Define el título que se mostrará en la vista de tu módulo.
+                    <br><br>
+                    <div id="setTitulo" style="width:100%; height:100px;"></div>
+                `,
+                code: {
+                    idElement: 'setTitulo',
+                    language: 'php',
+                    code: `\n<?php \n\n$this->setTitulo('Nombre de tu módulo');`
+                }
+            },
+            {
+                section: 6,
+                title: 'setLayout',
+                content: `
+                    Define el Layout o plantilla que se mostrará en la vista de tu módulo.
+                    <br><br>
+                    <div id="setLayout" style="width:100%; height:100px;"></div>
+                `,
+                code: {
+                    idElement: 'setLayout',
+                    language: 'php',
+                    code: `\n<?php \n\n$this->setLayout('nombre de la vista');`
+                }
+            },
+            {
+                section: 7,
+                title: 'setStoreMSG',
+                content: `
+                    Define el mensaje que quieres que se muestre después de que se guardaron los datos correctamente.
+                    <br><br>
+                    <div id="setStoreMSG" style="width:100%; height:100px;"></div>
+                `,
+                code: {
+                    idElement: 'setStoreMSG',
+                    language: 'php',
+                    code: `\n<?php \n\n$this->setStoreMSG('nombre de la vista');`
+                }
+            },
+            {
+                section: 8,
+                title: 'setValidationItem',
+                content: `
+                    Define las validaciones que se realizarán en los inputs que definas en setCampo.
+                    <br><br>
+                    <div id="setValidationItem" style="width:100%; height:100px;"></div>
+                `,
+                code: {
+                    idElement: 'setValidationItem',
+                    language: 'php',
+                    code: `\n<?php \n\n$this->setValidationItem('nombre_campo_database', 'required|string');`
+                }
+            },
+            {
+                section: 9,
+                title: 'setBoton',
+                content: `
+                    Permite agregar botones adicionales en la vista index.
+                    <br><br>
+                    <div id="setBoton" style="width:100%; height:100px;"></div>
+                `,
+                code: {
+                    idElement: 'setBoton',
+                    language: 'php',
+                    code: `\n<?php \n\n$this->setBoton(['nombre' => 'boton Extra', 'url' => 'ruta/{id}', 'class' => 'btn-outline-success', 'icon' => 'fas fa-info']);`
+                }
+            },
+            {
+                section: 10,
+                title: 'setBotonDT',
+                content: `
+                    Permite agregar botones adicionales dentro de la tabla Index.
+                    <br><br>
+                    <div id="setBotonDT" style="width:100%; height:100px;"></div>
+                `,
+                code: {
+                    idElement: 'setBotonDT',
+                    language: 'php',
+                    code: `\n<?php \n\n$this->setBotonDT(['text' => 'boton Extra', 'action' => 'funcion_de_js()', 'class' => 'btn-outline-success']);`
+                }
+            },
+            {
+                section: 11,
+                title: 'setDefaultBotonDT',
+                content: `
+                    Permite agregar botones adicionales dentro de la tabla Index.
+                    <br><br>
+                    <div id="setDefaultBotonDT" style="width:100%; height:100px;"></div>
+                `,
+                code: {
+                    idElement: 'setDefaultBotonDT',
+                    language: 'php',
+                    code: `\n<?php \n\n$this->setDefaultBotonDT(['text' => 'boton Extra', 'action' => 'funcion_de_js()', 'class' => 'btn-outline-success']);`
+                }
+            },
+            {
+                section: 12,
+                title: 'getSql',
+                content: `
+                    Muestra el query de la consulta que se está realizando, basado en los campos y condiciones definidas por medio de funciones. 
+                    <br><br>
+                    <div id="getSql" style="width:100%; height:100px;"></div>
+                `,
+                code: {
+                    idElement: 'getSql',
+                    language: 'php',
+                    code: `\n<?php \n\n$this->getSql();`
+                }
+            }
+        ]
     }
 ];
 
@@ -502,6 +661,7 @@ function setEditor(idElement, code, language) {
     require(['vs/editor/editor.main'], function () {
         var editor = monaco.editor.create(el, {
             theme: 'vs-dark',
+            readOnly: true,
             model: monaco.editor.createModel(code, language)
         });
         editor.layout();
