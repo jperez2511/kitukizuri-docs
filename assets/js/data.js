@@ -231,11 +231,13 @@ var es = [
                     podrás ver que el controlador está completamente vacío a excepción de las funciones por defecto, 
                     por lo tanto te recomendamos que utilices la siguiente estructura para comenzar a utilizar el <strong>KRUD</strong> el cual es el encargado 
                     de generar las funciones para crear tu primer CRUD. <br><br>
-                    <div id="controller" style="width:100%; height:500px;"></div> <br><br>`,
+                    <div id="controller" style="width:100%; height:500px;"></div> <br><br>
+                    Como te puedes dar cuenta, cuando implementas el KRUD en tu controlador, puedes hacer uso de las funciones de Eloquent y al mismo tiempo 
+                    todo se construye como un gran Query Builder. Es por ello que puedes usar los métodos disponibles en la siguiente sección.`,
                 code: {
                     idElement: 'controller',
                     language: 'php',
-                    code: `\n<?php \n\nnamespace App\\Http\Controllers\\Catalog\\Example\\Route; \n\nuse Krud; \nuse Illuminate\\Http\\Request; \nuse Models\\Catalogs\\Example\\ModelName;  \n\nclass ControllerName extends Krud \n{ \n    public function __construct() \n    { \n        # Define el modelo donde se consultarán los datos \n        $this->setModel(new ModelName); \n\n        # Define los campos que se van a mostrar, editar o solo consultar \n     } \n}`
+                    code: `\n<?php \n\nnamespace App\\Http\Controllers\\Catalog\\Example\\Route; \n\nuse Krud; \nuse Illuminate\\Http\\Request; \nuse Models\\Catalogs\\Example\\ModelName;  \n\nclass ControllerName extends Krud \n{ \n    public function __construct() \n    { \n        # Define el modelo donde se consultarán los datos \n        $this->setModel(new ModelName); \n\n        # Define los campos que se van a mostrar, editar o solo consultar \n        $this->setCampo(['nombre' => 'Label', 'campo' => 'nombre_campo_database']); \n\n        # Puedes definir condiciones utilizando las funciones de eloquent por ejemplo \n        $this->where('column_db', 12); \n        $this->orderBy('column_db', 'asc'); \n     } \n}`
                 }
             }
         ]           
@@ -244,7 +246,18 @@ var es = [
         section: 5,
         title:'Métodos disponibles',
         icon:'<i class="fa-duotone fa-function" style="--fa-primary-color: #cd7820; --fa-secondary-color: #4a5b67; --fa-secondary-opacity: 1;"></i>',
-        resume: 'Conoce los métodos disponibles para trabajar con el paquete.'
+        resume: 'Conoce los métodos disponibles para trabajar con el paquete.',
+        content: `
+            <i class="fa-duotone fa-pen-swirl" style="--fa-primary-color: #4a5b67; --fa-secondary-color: #fa7820; --fa-secondary-opacity: 1;"></i> 
+            <strong>Sobre escritura de métodos</strong> <br><br>
+            KRUD extiende de un controlador de Laravel, por lo tanto puedes sobrescribir los métodos que ya existen en el controlador de Laravel,
+            a continuación te mostramos los métodos que puedes sobrescribir: <br><br>
+            <div id="metodos" style="width:100%; height:800px;"></div>`,
+        code: {
+            idElement: 'metodos',
+            language: 'php',
+            code: `\n<?php \n\nnamespace App\\Http\Controllers\\Catalog\\Example\\Route; \n\nuse Krud; \nuse Illuminate\\Http\\Request; \nuse Models\\Catalogs\\Example\\ModelName;  \n\nclass ControllerName extends Krud \n{ \n    public function __construct() \n    { \n        $this->setModel(new ModelName); \n        $this->setCampo(['nombre' => 'Label', 'campo' => 'nombre_campo_database']); \n    }\n\n    public function create(Request $request) \n    { \n        ... \n    } \n\n    public function edit($id, Request $request) \n    { \n        ... \n    } \n\n    public function update($id, Request $request) \n    { \n        ... \n    } \n\n    public function destroy($id, Request $request) \n    { \n        ... \n    } \n \n\n    public function store(Request $request) \n    { \n        ... \n    } \n \n}`
+        },    
     }
 ];
 
