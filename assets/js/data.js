@@ -22,7 +22,8 @@ var es = [
                 title:'Componentes',
                 content: `
                     Dentro de la herramienta, existen tres componentes importantes: <br><br>
-                    <i class="fa-duotone fa-medal" style="--fa-primary-color: #fa7820; --fa-secondary-color: #4a5b67; --fa-secondary-opacity: 1;"></i> <strong>Krud Security</strong> <br><br>
+                    <i class="fa-duotone fa-medal" style="--fa-primary-color: #fa7820; --fa-secondary-color: #4a5b67; --fa-secondary-opacity: 1;"></i> 
+                    <strong>Krud Security</strong> <br><br>
                     Es el componente encargado de gestionar toda la seguridad de la aplicación, cuenta con las siguientes características:
                     <ul>
                         <li>Integración con <strong>Jetstream</strong> por defecto.</li>
@@ -31,15 +32,18 @@ var es = [
                         <li>Asignación de roles de usuarios</li>
                         <li>Asignación de permisos por módulos</li>
                     </ul> <br><br>
-                    <i class="fa-duotone fa-medal" style="--fa-primary-color: #fa7820; --fa-secondary-color: #4a5b67; --fa-secondary-opacity: 1;"></i> <strong>Krud Admin</strong> <br><br>
-                    Es el componente encargado de facilitar una interfaz gráfica para la gestión de CRUDs ademas de otras herramientas que ayudan a la administración de la aplicación, sus características son:
+                    <i class="fa-duotone fa-medal" style="--fa-primary-color: #fa7820; --fa-secondary-color: #4a5b67; --fa-secondary-opacity: 1;"></i> 
+                    <strong>Krud Admin</strong> <br><br>
+                    Es el componente encargado de facilitar una interfaz gráfica para la gestión de CRUDs ademas de otras herramientas que ayudan a la administración 
+                    de la aplicación, sus características son:
                     <ul>
                         <li>GUI para la gestión de Krud Security</li>
                         <li>Generador Low Code de "Catálogos (CRUD)"</li>
                         <li>Gestor integrado de base de datos MySQL</li>
                         <li>Almacenamiento de logs en base de datos - opcional</li>
                     </ul> <br><br>
-                    <i class="fa-duotone fa-medal" style="--fa-primary-color: #fa7820; --fa-secondary-color: #4a5b67; --fa-secondary-opacity: 1;"></i> <strong>Krud Auxiliar</strong> <br><br>
+                    <i class="fa-duotone fa-medal" style="--fa-primary-color: #fa7820; --fa-secondary-color: #4a5b67; --fa-secondary-opacity: 1;"></i> 
+                    <strong>Krud Auxiliar</strong> <br><br>
                     Es el componente encargado de facilitarte las configuraciones complicadas dentro de Laravel tales como: 
                     <ul>
                         <li>Entorno de desarrollo basado en <strong>Docker</strong>, es recomendable utilizarlo</li>
@@ -48,7 +52,8 @@ var es = [
                         <li>Integración con <strong>Trino</strong> - opcional</li>
                     </ul>
                     <br><br>
-                    Cada componente está diseñado utilizando las buenas y mejores practicas recomendadas por la comunidad, sin perder la flexibilidad de agregar elementos desarrollados por ti.`,
+                    Cada componente está diseñado utilizando las buenas y mejores practicas recomendadas por la comunidad, sin perder la flexibilidad de agregar 
+                    elementos desarrollados por ti.`,
             }
         ]
     },
@@ -65,14 +70,15 @@ var es = [
         code: {
             idElement: 'instalacion',
             language: 'shell',
-            code: `\n # Instalar la versión estable \n\ncomposer require kitukizuri/krud \n\n# Instalar con funcionalidades Beta \n\ncomposer require icebearsoft/kitukizuri:dev-master \n`
+            code: `\n# Instalar la versión estable \n\ncomposer require kitukizuri/krud \n\n# Instalar con funcionalidades Beta \n\ncomposer require icebearsoft/kitukizuri:dev-master \n`
         },
         sub: [
             {
                 section: 1,
                 title:'Pre requisitos de configuración',
                 content: `
-                    Si estas utilizando tu entorno de desarrollo basado en Docker puedes saltar esta sección, asegúrate de tener configurado los siguientes elementos: <br><br>
+                    Si estas utilizando tu entorno de desarrollo basado en Docker puedes saltar esta sección, asegúrate de tener configurado los siguientes 
+                    elementos: <br><br>
                     <strong>Elementos indispensables</strong>
                     <ul>
                         <li>Node JS versión 20 o superior </li>
@@ -87,22 +93,43 @@ var es = [
                 section: 2,
                 title:'Configuración',
                 content: `
-                    <div class="callout-block callout-block-warning">
+                    <div class="callout-block callout-block-info">
                         <div class="content">
                             <h4 class="callout-title">
                                 <i class="fa-duotone fa-bullhorn" style="--fa-primary-color: #4a5b67; --fa-secondary-color: #fa7820; --fa-secondary-opacity: 1;"></i>
-                                Consideraciones previas
+                                Consideraciones
                             </h4>
-                            <p>Para utilzar este comando te recomendamos previamente configurar tu entorno de desarrollo en docker para que no tengas ningún problema. de lo contrario ve a la sección de pre requisitos.</p>
+                            <p>Para utilzar este comando te recomendamos previamente configurar tu entorno de desarrollo en docker para que no tengas ningún 
+                            problema. de lo contrario ve a la sección de pre requisitos.</p>
                         </div><!--//content-->
                     </div>
-                    Una vez instalado el paquete, debes publicar los archivos de configuración y ejecutar las migraciones, para ello ejecuta el siguiente comando: <br><br>
-                    <div id="configuracion" style="width:100%; height:100px;"></div>`,
+                    Una vez instalado el paquete, debes publicar los archivos de configuración y ejecutar las migraciones, para ello ejecuta el siguiente 
+                    comando: <br><br>
+                    <div id="configuracion" style="width:100%; height:150px;"></div>`,
                 code: {
                     idElement: 'configuracion',
                     language: 'shell',
-                    code: `\n php artisan krud:install \n`
+                    code: `\nphp artisan krud:install \n\n# si estas utilizando el entorno de docker ejecuta el siguiente comando \n\ndocker exec -it id_container php artisan krud:install `
                 }
+            },
+            {
+                section: 3,
+                title: 'Datos predeterminados',
+                content: `
+                    Una vez que ejecutes el comando para instalar el paquete, se creará un usuario administrador con los siguientes datos: <br><br>
+                    <ul>
+                        <li><strong>Usuario:</strong> admin@mail.com</li>
+                        <li><strong>Contraseña:</strong> temp,123</li>
+                    </ul>
+                    <div class="callout-block callout-block-info">
+                        <div class="content">
+                            <h4 class="callout-title">
+                            <i class="fa-duotone fa-bullhorn" style="--fa-primary-color: #4a5b67; --fa-secondary-color: #fa7820; --fa-secondary-opacity: 1;"></i>
+                                Consideraciones
+                            </h4>
+                            <p>Es importante que cambies la contraseña del usuario administrador por una segura.</p>
+                        </div><!--//content-->
+                    </div>`
             }
         ]
     },
@@ -118,12 +145,36 @@ var es = [
         code: {
             idElement: 'docker',
             language: 'shell',
-            code: `\n php artisan krud:set-docker \n \n# ahora se ejecutará el asistente con el cual puedes configurar \n# los puertos expuestos de los contenedores y datos de conexión \n# a la base de datos \n \n¿Configurar base de datos? (yes/no) [no]: \n> yes \n \nNombre: \n> Nombre_de_base_de_datos \n \nContraseña: \n> Contraseña_para_base_de_datos \n \n¿Configurar puertos? (yes/no) [no]: \n> yes \n \nHTTP:  \n> 8080 \n \nMySQL: \n> 3306 \n \nMongo: \n> 27017 \n \nTrino: \n> 8081 \n \nLos puertos se han configurado correctamente!`
+            code: `\nphp artisan krud:set-docker \n\n# ahora se ejecutará el asistente con el cual puedes configurar \n# los puertos expuestos de los contenedores y datos de conexión \n# a la base de datos \n\n¿Configurar base de datos? (yes/no) [no]: \n> yes \n\nNombre: \n> Nombre_de_base_de_datos \n\nContraseña: \n> Contraseña_para_base_de_datos \n\n¿Configurar puertos? (yes/no) [no]: \n> yes \n\nHTTP:  \n> 8080 \n\nMySQL: \n> 3306 \n\nMongo: \n> 27017 \n\nTrino: \n> 8081 \n\nLos puertos se han configurado correctamente! \n\n# No olvides ejecutar \n\n docker compose build \n docker composer up -d`
         },
         sub: [
             {
                 section: 1,
                 title:'Elementos de docker',
+                content: `
+                    <i class="fa-duotone fa-folders" style="--fa-primary-color: #fa7820; --fa-secondary-color: #4a5b67; --fa-secondary-opacity: 1;"></i> 
+                    <strong> Estructura de carpetas</strong> <br><br>
+                    Cuando ejecutas el comando para configurar tu entorno de desarrollo con Docker, se creará una estructura de carpetas en tu proyecto, 
+                    la cual es la siguiente: <br><br>
+                    <div id="estructura" style="width:100%; height:400px;"></div> <br><br>
+                    Como puedes ver la estructura de carpeta se incluye dentro de tu proyecto para que tu lo puedas modificar según tus necesidades. <br><br>
+                    <i class="fa-duotone fa-truck-container" style="--fa-primary-color: #fa7820; --fa-secondary-color: #4a5b67; --fa-secondary-opacity: 1;"></i>
+                    <strong> ¿Como interactúan los contenedores?</strong> <br><br>
+                    Como puedes ver en la estructura de carpetas, existen 5 contenedores que se configuran para trabajar en conjunto, cada cumple una función 
+                    específica: <br><br>
+                    <ul>
+                        <li><strong>php</strong> (Requerido): Contienen las configuraciones necesarias para ejecutar un proyecto de Laravel</li>
+                        <li><strong>nginx</strong> (Requerido): Sirve un servidor virtual pre configurado para funcionar con el puerto 80</li>
+                        <li><strong>mysql</strong> (Requerido): Sirve un gestor de base de datos en MySQL utiliza la ultima versión estable. </li>
+                        <li><strong>mongo</strong> (Opcional):  Sirve un gestor de base de datos basado en MongoDB utiliza la ultima versión estable.</li>
+                        <li><strong>trino</strong> (Opcional): Sirve un gestor que permite hacer un cruce de datos entre bases de datos tale como Mongo y MySQL. </li>
+                    </ul>`,
+                code: {
+                    idElement: 'estructura',
+                    language: 'shell',
+                    code: `\n\ndocker-compose.yml # contiene la configuración para manejar los contenedores \n\ndockerfiles # carpeta que contiene los archivos con las configuraciones de cada contenedor \n├── mongo \n│   └── mongo.docker \n├── mysql \n│   ├── my.cnf \n│   └── mysql.docker \n├── nginx \n│   ├── nginx.docker \n│   └── vhost.conf \n├── php \n│   ├── limits.conf \n│   └── php.docker \n└── trino \n    ├── mongo.properties \n    ├── mysql.properties \n    └── trino.docker`
+                }
+                
             }
         ]
     },
@@ -131,7 +182,63 @@ var es = [
         section: 4,
         title:'Crea tu primer CRUD',
         icon:'<i class="fa-duotone fa-rectangle-history-circle-user" style="--fa-primary-color: #4a5b67; --fa-secondary-color: #fa7820; --fa-secondary-opacity: 1;"></i>',
-        resume: 'Aprende a construir tu primer CRUD con el paquete.'
+        resume: 'Aprende a construir tu primer CRUD con el paquete.',
+        content: `
+            Kitu Kizuri funciona bajo la filosofía de módulos, cada módulo cuenta con un conjunto de propiedades, las cuales, 
+            te permitirán tener un control total sobre los permisos que los usuarios podrán tener sobre la información de tu aplicación. <br><br>
+            para ello puedes ejecutar el siguiente comando: <br><br>
+            <div id="crud" style="width:100%; height:400px;"></div>
+            <div class="callout-block callout-block-info">
+                <div class="content">
+                    <h4 class="callout-title">
+                        <i class="fa-duotone fa-bullhorn" style="--fa-primary-color: #4a5b67; --fa-secondary-color: #fa7820; --fa-secondary-opacity: 1;"></i>
+                        Consideraciones
+                    </h4>
+                    <p>Al crear un módulo se modificarán los siguientes archivos: <strong>Seeders</strong>, <strong>Controller</strong>, 
+                    <strong>Models</strong>, <strong>Routes</strong>. Por favor asegúrese de tener un respaldo de estos archivos antes de continuar.'</p>
+                </div><!--//content-->
+            </div>
+            `,
+        code: {
+            idElement: 'crud',
+            language: 'shell',
+            code: `\nphp artisan krud:make --module \n\n# Se ejecutará el asistente con las siguientes preguntas \n\nNombre del módulo: \n> Nombre_de_modulo \n\n¿Desea crear el modelo del módulo? (yes/no) [no]: \n> yes \n\nRuta del modelo: \n> Catalog/Example/Route/ModelName \n\n¿Desea crear el controlador del módulo? (yes/no) [no]: \n> yes \n\nRuta del controlador: \n> Catalog/Example/Route/ControllerName \n\nEl módulo se ha creado exitosamente.`
+        },
+        sub: [
+            {
+                section: 1,
+                title:'¿Como se crea el módulo?',
+                content: `
+                    El primer paso es tomar el nombre de tú módulo nuevo, con ello se creará una Ruta en el archivo <strong>web.php</strong>, 
+                    para luego crear el Modelo y el Controlador en las rutas que tu haz definido, al mismo tiempo dentro se creará la definición del módulo y 
+                    los permisos que podrán tener los usuarios sobre el módulo en el archivo <strong>ModulosSeeder.php</strong> de tal forma que puedas realizar 
+                    modificaciones posteriores. <br><br>
+                    <strong>Elementos de un módulo</strong> <br><br>
+                    Para este punto es importante que conozcas que elementos se crean a nivel lógico dentro de tu aplicación. <br><br>
+                    <ol>
+                        <li><strong>Index:</strong> Muestra un listado de datos en formato de tabla sin que tu hagas algo adicional.</li>
+                        <li><strong>Create / Edit:</strong> Genera una vista dinámica encargada de facilitarte todos los inputs.</li>
+                        <li><strong>Show:</strong> Genera los datos a mostrar en la tabla de Index</li>
+                        <li><strong>Delete / Destroy:</strong> Elimina un registro dentro del CRUD. </li>
+                    </ol>
+                `,
+            },
+            {
+                section: 2,
+                title:'Estructura del controlador',
+                content: `
+                    Una vez terminado el proceso del comando anterior, ya puedes entrar a tu controlador y modificarlo para generar la estructura del KRUD. 
+                    podrás ver que el controlador está completamente vacío a excepción de las funciones por defecto, 
+                    por lo tanto te recomendamos que utilices la siguiente estructura para comenzar a utilizar el <strong>KRUD</strong> el cual es el encargado 
+                    de generar las funciones para crear tu primer CRUD. <br><br>
+                    <div id="controller" style="width:100%; height:500px;"></div> <br><br>`,
+                code: {
+                    idElement: 'controller',
+                    language: 'php',
+                    code: `\n<?php \n\nnamespace App\\Http\Controllers\\Catalog\\Example\\Route; \n\nuse Krud; \nuse Illuminate\\Http\\Request; \nuse Models\\Catalogs\\Example\\ModelName;  \n\nclass ControllerName extends Krud \n{ \n    public function __construct() \n    { \n        # Define el modelo donde se consultarán los datos \n        $this->setModel(new ModelName); \n\n        # Define los campos que se van a mostrar, editar o solo consultar \n     } \n}`
+                }
+            }
+        ]           
     },
     {
         section: 5,
