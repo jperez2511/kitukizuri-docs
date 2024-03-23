@@ -5,17 +5,19 @@ var es = [
         icon:'<i class="fa-duotone fa-signs-post" style="--fa-primary-color: #fa7820; --fa-secondary-color: #4a5b67; --fa-secondary-opacity: 1;"></i>',
         resume: 'Imagina una herramienta para facilitarte un punto de partida para tu aplicación, ahorrándote tiempo con componentes optimizados para funcionar con Laravel',
         content: `
-            Kitu Kizuri es la herramienta especialmente diseñada para Laravel, con la cual podrás contar con un punto de partida para tu aplicación, te puedes ahorrar tiempo de 
-            desarrollo tratando de implementar herramientas que con Kitu Kizuri puedes implementar en unos pocos clicks. El Kitu Kizuri cuenta con varios componentes
-            que forman parte del ecosistema de Laravel, configurados utilizando las buenas practicas y recomendaciones de la comunidad, para que tengas la confianza
-            de iniciar tu proyecto bajo un entorno seguro y confiable.`,
+            Kitu Kizuri es una herramienta diseñada específicamente para Laravel y sirve como punto de partida para tu aplicación. Al utilizar 
+            Kitu Kizuri, puedes implementar un entorno seguro y confiable en tan solo unos pocos clics, lo cual contrasta con la cantidad 
+            considerable de tiempo que tomaría hacerlo sin esta herramienta. Este kit incluye varios componentes integrados en el ecosistema 
+            de Laravel, configurados conforme a las mejores prácticas y recomendaciones de la comunidad. Esto te brinda la confianza necesaria 
+            para iniciar tu proyecto en un entorno sólido y confiable desde el principio.`,
         sub: [
             {
                 section: 1,
                 title:'¿Qué es Kitu Kizuri?',
                 content: `
-                    "Kitu Kizuri" son dos palabras que en Suajili significan "algo bonito". Nombrar un paquete como "Algo Bonito" es porque nuestro objetivo 
-                    está en entregar una herramienta que te permita generar aplicaciones de manera rápida y practica, que programar se vuelva algo bonito.`,
+                    El nombre "Kitu Kizuri" proviene del suajili y significa "algo bonito". Elegimos este nombre para nuestro paquete porque 
+                    nuestro objetivo es ofrecerte una herramienta que te permita desarrollar aplicaciones de forma rápida y práctica, 
+                    transformando la programación en algo agradable.`,
             },
             {
                 section: 2,
@@ -34,8 +36,8 @@ var es = [
                     </ul> <br><br>
                     <i class="fa-duotone fa-medal" style="--fa-primary-color: #fa7820; --fa-secondary-color: #4a5b67; --fa-secondary-opacity: 1;"></i> 
                     <strong>Krud Admin</strong> <br><br>
-                    Es el componente encargado de facilitar una interfaz gráfica para la gestión de CRUDs ademas de otras herramientas que ayudan a la administración 
-                    de la aplicación, sus características son:
+                    Es el componente encargado de facilitar una interfaz gráfica para la gestión de CRUDs ademas de otras herramientas que 
+                    ayudan a la administración de la aplicación, sus características son:
                     <ul>
                         <li>GUI para la gestión de Krud Security</li>
                         <li>Generador Low Code de "Catálogos (CRUD)"</li>
@@ -52,8 +54,8 @@ var es = [
                         <li>Integración con <strong>Trino</strong> - opcional</li>
                     </ul>
                     <br><br>
-                    Cada componente está diseñado utilizando las buenas y mejores practicas recomendadas por la comunidad, sin perder la flexibilidad de agregar 
-                    elementos desarrollados por ti.`,
+                    Cada componente está diseñado utilizando las buenas y mejores practicas recomendadas por la comunidad, sin perder la 
+                    flexibilidad de agregar elementos desarrollados por ti.`,
             }
         ]
     },
@@ -65,7 +67,8 @@ var es = [
         content: `
             Puedes instalar el paquete en tu aplicación de Laravel utilizando Composer de la siguiente forma: <br><br>
             <div id="instalacion" style="width:100%; height:200px;"></div> <br><br>
-            Una vez que termine la instalación con Composer puedes configurar tu entorno de desarrollo con Docker o puedes instalar los paquetes que trae el Kitu Kizuri. 
+            Una vez que termine la instalación con Composer puedes configurar tu entorno de desarrollo con Docker o puedes instalar los 
+            paquetes que trae el Kitu Kizuri. 
         `,
         code: {
             idElement: 'instalacion',
@@ -77,8 +80,8 @@ var es = [
                 section: 1,
                 title:'Pre requisitos de configuración',
                 content: `
-                    Si estas utilizando tu entorno de desarrollo basado en Docker puedes saltar esta sección, asegúrate de tener configurado los siguientes 
-                    elementos: <br><br>
+                    Si, estás utilizando tu entorno de desarrollo basado en Docker puedes saltar esta sección, asegúrate de tener configurado 
+                    los siguientes elementos: <br><br>
                     <strong>Elementos indispensables</strong>
                     <ul>
                         <li>Node JS versión 20 o superior </li>
@@ -99,12 +102,14 @@ var es = [
                                 <i class="fa-duotone fa-bullhorn" style="--fa-primary-color: #4a5b67; --fa-secondary-color: #fa7820; --fa-secondary-opacity: 1;"></i>
                                 Consideraciones
                             </h4>
-                            <p>Para utilzar este comando te recomendamos previamente configurar tu entorno de desarrollo en docker para que no tengas ningún 
-                            problema. de lo contrario ve a la sección de pre requisitos.</p>
+                            <p>
+                                Para utilzar este comando te recomendamos previamente configurar tu entorno de desarrollo en docker para que 
+                                no tengas ningún problema. De lo contrario ve a la sección de pre requisitos.
+                            </p>
                         </div><!--//content-->
                     </div>
-                    Una vez instalado el paquete, debes publicar los archivos de configuración y ejecutar las migraciones, para ello ejecuta el siguiente 
-                    comando: <br><br>
+                    Una vez instalado el paquete, debes publicar los archivos de configuración y ejecutar las migraciones, para ello ejecuta 
+                    el siguiente comando: <br><br>
                     <div id="configuracion" style="width:100%; height:150px;"></div>`,
                 code: {
                     idElement: 'configuracion',
@@ -116,7 +121,8 @@ var es = [
                 section: 3,
                 title: 'Datos predeterminados',
                 content: `
-                    Una vez que ejecutes el comando para instalar el paquete, se creará un usuario administrador con los siguientes datos: <br><br>
+                    Una vez que ejecutes el comando para instalar el paquete, se creará un usuario administrador con los siguientes datos: 
+                    <br><br>
                     <ul>
                         <li><strong>Usuario:</strong> admin@mail.com</li>
                         <li><strong>Contraseña:</strong> temp,123</li>
@@ -135,12 +141,13 @@ var es = [
     },
     {
         section: 3,
-        title:'Implementar docker',
+        title:'Implementar Docker',
         icon:'<i class="fa-brands fa-docker"></i>',
         resume: 'Si utilizas docker, puedes configurar tu entorno de desarrollo con un solo comando.',
         content: `
-            En las secciones anteriores te hemos recomendado que utilices Docker para tu entorno de desarrollo, especialmente porque ya hemos preparado una 
-            forma de trabajo tan eficiente y rápida que no te llevará más de 5 minutos tener tu entorno listo. para ello puedes ejecutar el siguiente comando: <br><br>
+            En las secciones anteriores te hemos recomendado que utilices Docker para tu entorno de desarrollo, especialmente porque ya hemos
+            preparado una forma de trabajo tan eficiente y rápida que no te llevará más de 5 minutos tener tu entorno listo. Para ello puedes 
+            ejecutar el siguiente comando: <br><br>
             <div id="docker" style="width:100%; height:600px;"></div>`,
         code: {
             idElement: 'docker',
@@ -154,20 +161,21 @@ var es = [
                 content: `
                     <i class="fa-duotone fa-folders" style="--fa-primary-color: #fa7820; --fa-secondary-color: #4a5b67; --fa-secondary-opacity: 1;"></i> 
                     <strong> Estructura de carpetas</strong> <br><br>
-                    Cuando ejecutas el comando para configurar tu entorno de desarrollo con Docker, se creará una estructura de carpetas en tu proyecto, 
-                    la cual es la siguiente: <br><br>
+                    Cuando ejecutas el comando para configurar tu entorno de desarrollo con Docker, se creará una estructura de carpetas en 
+                    tu proyecto, la cual es la siguiente: <br><br>
                     <div id="estructura" style="width:100%; height:400px;"></div> <br><br>
-                    Como puedes ver la estructura de carpeta se incluye dentro de tu proyecto para que tu lo puedas modificar según tus necesidades. <br><br>
+                    Como puedes ver la estructura de carpeta se incluye dentro de tu proyecto para que tu lo puedas modificar según tus 
+                    necesidades. <br><br>
                     <i class="fa-duotone fa-truck-container" style="--fa-primary-color: #fa7820; --fa-secondary-color: #4a5b67; --fa-secondary-opacity: 1;"></i>
                     <strong> ¿Como interactúan los contenedores?</strong> <br><br>
-                    Como puedes ver en la estructura de carpetas, existen 5 contenedores que se configuran para trabajar en conjunto, cada cumple una función 
-                    específica: <br><br>
+                    Como puedes ver en la estructura de carpetas, existen 5 contenedores que se configuran para trabajar en conjunto, cada 
+                    cumple una función específica: <br><br>
                     <ul>
-                        <li><strong>php</strong> (Requerido): Contienen las configuraciones necesarias para ejecutar un proyecto de Laravel</li>
-                        <li><strong>nginx</strong> (Requerido): Sirve un servidor virtual pre configurado para funcionar con el puerto 80</li>
-                        <li><strong>mysql</strong> (Requerido): Sirve un gestor de base de datos en MySQL utiliza la ultima versión estable. </li>
-                        <li><strong>mongo</strong> (Opcional):  Sirve un gestor de base de datos basado en MongoDB utiliza la ultima versión estable.</li>
-                        <li><strong>trino</strong> (Opcional): Sirve un gestor que permite hacer un cruce de datos entre bases de datos tale como Mongo y MySQL. </li>
+                        <li><strong>php</strong> (Requerido): contienen las configuraciones necesarias para ejecutar un proyecto de Laravel</li>
+                        <li><strong>nginx</strong> (Requerido): sirve un servidor virtual pre configurado para funcionar con el puerto 80</li>
+                        <li><strong>mysql</strong> (Requerido): sirve un gestor de base de datos en MySQL utiliza la ultima versión estable. </li>
+                        <li><strong>mongo</strong> (Opcional):  sirve un gestor de base de datos basado en MongoDB utiliza la ultima versión estable.</li>
+                        <li><strong>trino</strong> (Opcional): sirve un gestor que permite hacer un cruce de datos entre bases de datos tale como Mongo y MySQL. </li>
                     </ul>`,
                 code: {
                     idElement: 'estructura',
@@ -210,16 +218,16 @@ var es = [
                 title:'¿Como se crea el módulo?',
                 content: `
                     El primer paso es tomar el nombre de tú módulo nuevo, con ello se creará una Ruta en el archivo <strong>web.php</strong>, 
-                    para luego crear el Modelo y el Controlador en las rutas que tu haz definido, al mismo tiempo dentro se creará la definición del módulo y 
+                    para luego crear el Modelo y el Controlador en las rutas que tu has definido, al mismo tiempo dentro se creará la definición del módulo y 
                     los permisos que podrán tener los usuarios sobre el módulo en el archivo <strong>ModulosSeeder.php</strong> de tal forma que puedas realizar 
                     modificaciones posteriores. <br><br>
                     <strong>Elementos de un módulo</strong> <br><br>
                     Para este punto es importante que conozcas que elementos se crean a nivel lógico dentro de tu aplicación. <br><br>
                     <ol>
-                        <li><strong>Index:</strong> Muestra un listado de datos en formato de tabla sin que tu hagas algo adicional.</li>
-                        <li><strong>Create / Edit:</strong> Genera una vista dinámica encargada de facilitarte todos los inputs.</li>
-                        <li><strong>Show:</strong> Genera los datos a mostrar en la tabla de Index</li>
-                        <li><strong>Delete / Destroy:</strong> Elimina un registro dentro del CRUD. </li>
+                        <li><strong>Index:</strong> muestra un listado de datos en formato de tabla sin que tu hagas algo adicional.</li>
+                        <li><strong>Create / Edit:</strong> genera una vista dinámica encargada de facilitarte todos los inputs.</li>
+                        <li><strong>Show:</strong> genera los datos a mostrar en la tabla de Index</li>
+                        <li><strong>Delete / Destroy:</strong> elimina un registro dentro del CRUD. </li>
                     </ol>
                 `,
             },
@@ -228,7 +236,7 @@ var es = [
                 title:'Estructura del controlador',
                 content: `
                     Una vez terminado el proceso del comando anterior, ya puedes entrar a tu controlador y modificarlo para generar la estructura del KRUD. 
-                    podrás ver que el controlador está completamente vacío a excepción de las funciones por defecto, 
+                    Podrás ver que el controlador está completamente vacío a excepción de las funciones por defecto, 
                     por lo tanto te recomendamos que utilices la siguiente estructura para comenzar a utilizar el <strong>KRUD</strong> el cual es el encargado 
                     de generar las funciones para crear tu primer CRUD. <br><br>
                     <div id="controller" style="width:100%; height:500px;"></div> <br><br>
@@ -364,7 +372,7 @@ var es = [
                 section: 9,
                 title: 'setBoton',
                 content: `
-                    Permite agregar botones adicionales en la vista index.
+                    Agrega botones adicionales en la vista index.
                     <br><br>
                     <div id="setBoton" style="width:100%; height:100px;"></div>
                 `,
@@ -378,7 +386,7 @@ var es = [
                 section: 10,
                 title: 'setBotonDT',
                 content: `
-                    Permite agregar botones adicionales dentro de la tabla Index.
+                    Agrega botones adicionales dentro de la tabla Index.
                     <br><br>
                     <div id="setBotonDT" style="width:100%; height:100px;"></div>
                 `,
@@ -392,7 +400,7 @@ var es = [
                 section: 11,
                 title: 'setDefaultBotonDT',
                 content: `
-                    Permite agregar botones adicionales dentro de la tabla Index.
+                    Agrega botones adicionales dentro de la tabla Index.
                     <br><br>
                     <div id="setDefaultBotonDT" style="width:100%; height:100px;"></div>
                 `,
